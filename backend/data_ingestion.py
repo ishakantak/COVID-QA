@@ -3,6 +3,8 @@ from haystack import Finder
 from haystack.database.elasticsearch import ElasticsearchDocumentStore
 from haystack.retriever.elasticsearch import ElasticsearchRetriever
 
+class DataIngestion:
+
 def index_new_docs(document_store, retriever):
     # Get dataframe with questions, answers and some metadata
     df = pd.read_csv("data/faqs/faq_covidbert.csv")
